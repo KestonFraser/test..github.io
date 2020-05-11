@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Natural Disasters</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+    
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+
+
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+
+<style>
+  body{
+    font-family:  perpetua;
+    font-size: 25px;
+  }
+
+  #results{
+      background-image: url ("https://dema.az.gov/sites/default/files/news-articles/AZ%20Disasters.jpg"); 
+      color: black; 
+    }
+
+      #results3{
+        background-image: url("https://backgrounds4k.net/wp-content/uploads/2016/04/Tornado-background-3840x2160.jpg");
+      }
+
+      #results2{
+        
+        background-image: url("https://www.freeimageslive.com/galleries/nature/sky/pics/rain_clouds.JPG");
+        color: white;
+      }
+
+      body{
+        background-color: #cfd8dc ;
+      }
+
+      img{
+        width: 250px;
+        height: 250px;
+      }
+
+      .fig2{
+        position: absolute;
+        left: 350px;
+        top: 570px;
+      }
+
+      .fig3{
+        position: absolute;
+        right: 325px;
+        top: 600px;
+      }
+
+      .fig4{
+        position: absolute;
+        right: 10px;
+        top: 570px;
+      }
+
+      .fig5{
+        text-align: right;
+      }
+
+      @media screen and (max-width: 600px) {
+        img{
+          width: 200px;
+          height: 200px;
+        }
+        .fig2{
+        position: absolute;
+        left: 250px;
+        top: 609px;
+      }
+
+      .fig3{
+        position: static;
+      }
+
+      .fig4{
+        position: absolute;
+        left: 250px;
+        top: 826px;
+      }
+    }
+
+    .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+    
+    
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="nav-extended blue ">
+      <div class="nav-wrapper blue ">
+        <a href="#" class="brand-logo center">Natural Disasters</a> 
+          
+      </div>
+      <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a class="active" href="#results">Disaster Summary</a></li>
+          <li class="tab"><a  href="#results2">Floods</a></li>
+          <li class="tab"><a  href="#results3">Tornados and Hurricanes </a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <section id="results" class="col s12">
+
+     <figure class="highcharts-figure">
+        <div id="container"></div>
+
+        <p class="highcharts-description">
+          The chart above shows a summary of natural disasters recorded across the US from 1953 on the <em>Federal Emergency Management Agency (FEMA)</em> website. 
+
+        </p>
+
+        <p>
+          The pie chart reveals that <b> Floods </b> make up the majority of disasters recorded druing the time period followed by <b> Tornados</b> then <b> Hurricanes</b>. 
+        </p>
+                  
+    </figure>
+
+   
+    </section>
+
+    <section id="results2" class="col s12">
+
+        <figure class="highcharts-figure">
+          <div id="container1"></div>
+          <p class="highcharts-description">
+              This column chart shows severe Flooding incidents recorded across the seven most affected states.
+          </p>
+        </figure>
+
+        <br> 
+
+        <div class="row">
+          <div class="column">
+            <img src="https://storage.googleapis.com/afs-prod/media/5ca8463fecd6408b970e16ec677076b4/800.jpeg" alt="A Flooded residential area">
+          </div>
+
+          <div class="column">
+            <img src="https://s.abcnews.com/images/US/flooding-indiana1-usa-today-ml-180226_16x9_992.jpg" alt="Image of a flooded area" >
+          </div>
+
+          <div class="column">
+            <img src="https://s.abcnews.com/images/US/flooding-canal-cars-_hpMain_20190708-101307_16x9_992.jpg" alt="Image of a flooded area with vehicles" >
+          </div>
+
+          <div class="column">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR33tRz-WsKQEEpZ3YAAL7W8pUMJGlm7MBRl0VDjz1P10_mhxRm&usqp=CAU" alt="Evacuation of residents from a flooded area" >
+          </div>
+        </div>
+
+        
+        <!-- <figure>
+          
+          
+        </figure>
+
+        <figure class="fig2">
+          <img src="https://s.abcnews.com/images/US/flooding-indiana1-usa-today-ml-180226_16x9_992.jpg" alt="Image of a flooded area" >
+        </figure>
+        
+        <figure class="fig3">
+          <img src="https://s.abcnews.com/images/US/flooding-canal-cars-_hpMain_20190708-101307_16x9_992.jpg" alt="Image of a flooded area with vehicles" >
+        </figure>
+
+        <figure class="fig4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR33tRz-WsKQEEpZ3YAAL7W8pUMJGlm7MBRl0VDjz1P10_mhxRm&usqp=CAU" alt="Evacuation of residents from a flooded area" >
+        </figure> -->
+
+    </section>
+
+    <section id="results3" class="col s12">
+
+        <figure class="highcharts-figure">
+          <div id="container2"></div>
+          <p class="highcharts-description">
+             Above is a comparison of the Number of Hurricanes and Tornadoes in four states.
+          </p>
+          <p>
+             These four states were selceted because they were the only states recorded that had <br> experienced both hurricanes and toronados.
+          </p>
+          <p>
+             Eventhough across all states there are more tornados than hurricanes, in these four <br> higlighted states in the chart above, hurricanes have a higher frequency than tornados, <br> with the exception of Georgia.   
+          </p>
+        </figure>
+
+        <figure class="fig5">
+          <img src="https://specials-images.forbesimg.com/imageserve/847391148/960x0.jpg?fit=scale" alt="Strong winds of a Hurricane" >
+        </figure>
+
+    </section>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
